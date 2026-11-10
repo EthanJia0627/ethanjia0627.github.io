@@ -1,0 +1,11 @@
+---
+layout: archive
+title: Publications
+permalink: /publications/
+author_profile: true
+---
+{% assign papers = site.publications | sort: 'rank' %}
+<h2 class="section-title">2026</h2>
+{% for paper in papers %}<article class="citation"><span class="venue">{{ paper.venue }}</span><h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
+<p class="authors">{{ paper.authors | replace: 'Yiyang Jia','<strong>Yiyang Jia</strong>' }}</p>
+<p>{{ paper.citation }}</p>{% include paper-links.html paper=paper %}</article>{% endfor %}

@@ -1,0 +1,7 @@
+<article class="research-row">
+  <a class="research-image" href="{{ include.paper.url | relative_url }}" aria-label="Read about {{ include.paper.short }}"><img src="{{ include.paper.image | relative_url }}" alt="{{ include.paper.alt }}"></a>
+  <div><span class="venue">{{ include.paper.venue }} · {{ include.paper.year }}</span>
+  <h3><a href="{{ include.paper.url | relative_url }}">{{ include.paper.short }}</a></h3>
+  <p>{{ include.paper.summary }}</p>
+  {% include paper-links.html paper=include.paper %}</div>
+</article>

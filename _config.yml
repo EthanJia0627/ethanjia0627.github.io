@@ -1,0 +1,28 @@
+title: "Yiyang Jia"
+name: "Yiyang Jia"
+description: "Research by Yiyang Jia, a UCL Computer Science PhD student studying continual learning in robotics."
+locale: en-GB
+url: ""
+baseurl: ""
+site_theme: default
+repository: EthanJia0627/EthanJia0627.github.io
+author:
+  name: "Yiyang (Ethan) Jia"
+  avatar: profile.jpg
+  bio: "PhD student in Computer Science"
+  employer: "University College London"
+  location: "London, UK"
+  github: EthanJia0627
+  email: yiyang.jia.24@ucl.ac.uk
+collections:
+  publications:
+    output: true
+    permalink: /publications/:name/
+defaults:
+  - scope: {path: "", type: publications}
+    values: {layout: paper, author_profile: true}
+plugins: [jekyll-feed, jekyll-sitemap]
+atom_feed: {hide: true}
+markdown: kramdown
+sass: {style: compressed, quiet_deps: true, silence_deprecations: [import, global-builtin, color-functions, if-function]}
+exclude: [README.md, LICENSE, Gemfile, Gemfile.lock, vendor, tmp, .bundle]

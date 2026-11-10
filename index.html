@@ -1,0 +1,13 @@
+---
+layout: archive
+title: Continual learning in robotics
+permalink: /
+author_profile: true
+---
+<p class="intro">I'm Yiyang Jia, a PhD student in Computer Science at University College London. I study how robots learn new skills without losing earlier ones, and how they recognise when to reuse them.</p>
+<p>My current focus is humanoid robots. When a new request arrives while a robot is already moving, how should it adapt without being told where one task ends and the next begins?</p>
+<h2 class="section-title">Selected research</h2>
+{% assign papers = site.publications | sort: 'rank' %}
+{% for paper in papers %}{% include research-row.html paper=paper %}{% endfor %}
+<h2 class="section-title">Background</h2>
+<p>Before my PhD, I worked on embodied intelligence at the Institute of Automation, Chinese Academy of Sciences. I hold an MSc in Robotics and AI (Distinction) from UCL and a BEng in Robot Engineering from the University of Electronic Science and Technology of China.</p>

@@ -1,0 +1,10 @@
+---
+layout: archive
+---
+<span class="venue">{{ page.venue }} · {{ page.year }}</span>
+<p class="authors">{{ page.authors }}</p>
+<p>{{ page.citation }}</p>
+{% include paper-links.html paper=page %}
+<figure class="paper-figure"><img src="{{ page.image | relative_url }}" alt="{{ page.alt }}"><figcaption>{{ page.alt }}</figcaption></figure>
+{{ content }}
+<p><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
