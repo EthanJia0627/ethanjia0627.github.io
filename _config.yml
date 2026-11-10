@@ -1,4 +1,5 @@
 title: "Yiyang Jia"
+title_separator: "|"
 name: "Yiyang Jia"
 description: "Research by Yiyang Jia, a UCL Computer Science PhD student studying continual learning in robotics."
 locale: en-GB
@@ -12,7 +13,9 @@ author:
   bio: "PhD student in Computer Science"
   employer: "University College London"
   location: "London, UK"
+  googlescholar: "https://scholar.google.com/citations?user=vSA6oQsAAAAJ"
   github: EthanJia0627
+  linkedin: yiyang-jia-61379b315
   email: yiyang.jia.24@ucl.ac.uk
 collections:
   publications:
