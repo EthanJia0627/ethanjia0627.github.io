@@ -2,9 +2,21 @@
 layout: archive
 ---
 <span class="venue">{{ page.venue }} · {{ page.year }}</span>
-<p class="authors">{{ page.authors }}</p>
+<p class="authors">{{ page.authors | escape | replace: 'Yiyang Jia','<strong>Yiyang Jia</strong>' }}</p>
 <p>{{ page.citation }}</p>
 {% include paper-links.html paper=page %}
+{% if page.bibtex %}<p><a class="cite-jump" href="#bibtex">Cite this paper</a></p>{% endif %}
 <figure class="paper-figure"><img src="{{ page.image | relative_url }}" alt="{{ page.alt }}"><figcaption>{{ page.alt }}</figcaption></figure>
 {{ content }}
+{% if page.bibtex %}
+<section class="bib-section" data-citation aria-labelledby="bibtex">
+  <div class="bib-heading">
+    <h2 id="bibtex" class="section-title">BibTeX</h2>
+    <button type="button" class="copy-citation" hidden><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy BibTeX</button>
+  </div>
+  <pre><code>{{ page.bibtex | strip | escape }}</code></pre>
+  <span class="copy-status" role="status"></span>
+</section>
+<script defer src="{{ '/assets/js/citation.js' | relative_url }}"></script>
+{% endif %}
 <p><a href="{{ '/publications/' | relative_url }}">All publications</a></p>

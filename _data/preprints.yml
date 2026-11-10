@@ -1,0 +1,15 @@
+- title: "TRACE: Target-State Risk-Aligned Conditional Execution for Embodied Tracking"
+  short: TRACE
+  authors: "Mingyang Lyu, Gongce Cao, Yiyang Jia, Lu Jia, Erliang Lin, Yuhao Zhang, Yinqian Sun, Pin Lyu, Feifei Zhao and Bo Wang"
+  citation: "arXiv:2610.41275 · October 2026"
+  url: "https://arxiv.org/abs/2610.41275"
+  links:
+    - {label: arXiv, url: "https://arxiv.org/abs/2610.41275"}
+- title: "Beyond Kinematic Tracking: Preserving Expressive Characteristics in Humanoid Whole-Body Control"
+  short: Beyond Kinematic Tracking
+  authors: "Lingfan Bao, Hanshang Zhu, Yan Pan, Jincheng Wang, Jingyang Yu, Tianhu Peng, Yiyang Jia, Dimitrios Kanoulas and Chengxu Zhou"
+  citation: "arXiv:2610.19393 · October 2026"
+  url: "https://arxiv.org/abs/2610.19393"
+  links:
+    - {label: arXiv, url: "https://arxiv.org/abs/2610.19393"}
+    - {label: "Video (YouTube)", url: "https://www.youtube.com/watch?v=5EmDvZdKiBY"}

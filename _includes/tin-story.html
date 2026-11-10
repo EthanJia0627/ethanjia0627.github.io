@@ -1,0 +1,21 @@
+{% comment %}Adapted from the thought experiment on slides 3, 6 and 7 of the CS x EEE workshop, 9 November 2026. The dotted line illustrates the turn to look; it is not a measured gaze trace.{% endcomment %}
+<figure class="tin-story" id="tin-example" aria-labelledby="tin-title">
+  <figcaption id="tin-title">A thought experiment: &ldquo;Could you open this?&rdquo;</figcaption>
+  <ol>
+    <li>
+      <div class="tin-look">
+        <img src="{{ '/images/tin-story/turn-to-look.webp' | relative_url }}" alt="Still holding its mug, the robot turns its head towards the tin in the speaker's hand.">
+        <svg viewBox="0 0 420 236" aria-hidden="true" focusable="false"><path d="M178 76 L79 117" fill="none" stroke="#16585f" stroke-width="2.5" stroke-dasharray="4 4"/><circle cx="75" cy="119" r="4" fill="none" stroke="#16585f" stroke-width="2"/></svg>
+      </div>
+      <div><strong>Look before reaching</strong><p>Which object does &ldquo;this&rdquo; mean? Turning towards the voice brings the tin into view.</p></div>
+    </li>
+    <li>
+      <img src="{{ '/images/tin-story/bottle-and-tin.webp' | relative_url }}" alt="A screw-top bottle and a pull-tab tin stand beside the blue mug.">
+      <div><strong>Reuse the grip</strong><p>Opening bottles taught it to steady the container. That grip still helps, but there is no cap to twist.</p></div>
+    </li>
+    <li>
+      <img src="{{ '/images/tin-story/first-tin.webp' | relative_url }}" alt="One hand holds the tin steady while the other lifts its ring. A gap appears under the lid.">
+      <div><strong>Try a different pull</strong><p>Pulling flat fails. Lifting the ring opens a gap. Will it try lifting first on the next tin?</p></div>
+    </li>
+  </ol>
+</figure>

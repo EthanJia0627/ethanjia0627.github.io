@@ -1,7 +1,26 @@
 <article class="research-row">
+  {% if include.paper.preview %}
+  {% assign preview = include.paper.preview %}
+  <figure class="research-preview">
+    <video class="research-clip" controls muted playsinline loop preload="none" width="704" height="384" poster="{{ preview.poster | relative_url }}" aria-label="{{ preview.alt | escape }}">
+      <source src="{{ preview.src | relative_url }}" type="video/mp4">
+      <a href="{{ preview.src | relative_url }}">Watch the experiment clip</a>
+    </video>
+    <figcaption>{% for label in preview.labels %}<span>{{ label }}</span>{% endfor %}</figcaption>
+    <button type="button" class="clip-toggle" aria-label="Play preview" title="Play preview" hidden><i class="fa-solid fa-play" aria-hidden="true"></i></button>
+  </figure>
+  {% else %}
   <a class="research-image" href="{{ include.paper.url | relative_url }}" aria-label="Read about {{ include.paper.short }}"><img src="{{ include.paper.image | relative_url }}" alt="{{ include.paper.alt }}"></a>
+  {% endif %}
   <div><span class="venue">{{ include.paper.venue }} · {{ include.paper.year }}</span>
   <h3><a href="{{ include.paper.url | relative_url }}">{{ include.paper.short }}</a></h3>
+  <p class="research-byline authors">{{ include.paper.short_authors | default: include.paper.authors | escape | replace: 'Yiyang Jia','<strong>Yiyang Jia</strong>' }}</p>
   <p>{{ include.paper.summary }}</p>
-  {% include paper-links.html paper=include.paper %}</div>
+  <div data-citation>
+    {% include paper-links.html paper=include.paper inline_citation=true %}
+    {% if include.paper.bibtex %}
+    <pre class="inline-bibtex" hidden><code>{{ include.paper.bibtex | strip | escape }}</code></pre>
+    <span class="copy-status" role="status"></span>
+    {% endif %}
+  </div></div>
 </article>

@@ -9,3 +9,14 @@ author_profile: true
 {% for paper in papers %}<article class="citation"><span class="venue">{{ paper.venue }}</span><h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
 <p class="authors">{{ paper.authors | replace: 'Yiyang Jia','<strong>Yiyang Jia</strong>' }}</p>
 <p>{{ paper.citation }}</p>{% include paper-links.html paper=paper %}</article>{% endfor %}
+{% if site.data.preprints %}
+<h2 class="section-title" id="preprints">Preprints</h2>
+{% for paper in site.data.preprints %}
+<article class="citation">
+  <span class="venue">{{ paper.citation }}</span>
+  <h3><a href="{{ paper.url }}">{{ paper.title }}</a></h3>
+  <p class="authors">{{ paper.authors | replace: 'Yiyang Jia','<strong>Yiyang Jia</strong>' }}</p>
+  {% include paper-links.html paper=paper %}
+</article>
+{% endfor %}
+{% endif %}

@@ -1,0 +1,58 @@
+---
+layout: archive
+title: Academic CV
+permalink: /cv/
+author_profile: true
+---
+<article class="cv">
+  <header class="cv-header">
+    <div>
+      <h2>Yiyang Jia</h2>
+      <p>PhD student in Computer Science, University College London</p>
+      <p class="cv-contact"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://github.com/{{ site.author.github }}">GitHub: {{ site.author.github }}</a></p>
+    </div>
+    <a class="cv-download" href="{{ '/files/yiyang-jia-academic-cv.pdf' | relative_url }}" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</a>
+  </header>
+  <section>
+    <h2>Research</h2>
+    <p>I study continual learning in humanoid robots: how a robot can acquire new skills without forgetting earlier ones, and recognise when a familiar skill can be reused without an explicit task boundary.</p>
+  </section>
+  <section>
+    <h2>Education</h2>
+    <ul class="cv-entries">
+      <li><div><strong>PhD in Computer Science</strong><br>University College London</div><span>2026 to present</span></li>
+      <li><div><strong>MSc in Robotics and AI, Distinction</strong><br>University College London</div><span>2025</span></li>
+      <li><div><strong>BEng in Robot Engineering</strong><br>University of Electronic Science and Technology of China</div><span>2020 to 2024</span></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Research and teaching experience</h2>
+    <ul class="cv-entries">
+      <li><div><strong>Postgraduate Teaching Assistant</strong>, University College London<br>COMP0205: Mechatronics and Making. Supported practical labs and tutorials.</div><span>2026/27</span></li>
+      <li><div><strong>Research Intern</strong>, Institute of Automation, Chinese Academy of Sciences<br>Worked on embodied intelligence, including the safety of vision-language-action policies.</div><span>2025 to 2026</span></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Selected publications</h2>
+    <ul class="cv-papers">
+    {% assign papers = site.publications | sort: 'rank' %}
+    {% for paper in papers %}
+      <li><a href="{{ paper.links.first.url }}">{{ paper.title }}</a><br>{{ paper.authors | escape | replace: 'Yiyang Jia','<strong>Yiyang Jia</strong>' }}. <i>{{ paper.venue }}</i>, {{ paper.year }}{% if paper.venue == 'Neurocomputing' %}, {{ paper.citation | downcase }}{% endif %}.</li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% if site.data.preprints %}
+  <section>
+    <h2>Preprints</h2>
+    <ul class="cv-papers">
+    {% for paper in site.data.preprints %}
+      <li><a href="{{ paper.url }}">{{ paper.title }}</a><br>{{ paper.authors | escape | replace: 'Yiyang Jia','<strong>Yiyang Jia</strong>' }}. {{ paper.citation }}.</li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+  <section>
+    <h2>Selected award</h2>
+    <p>National Scholarship, University of Electronic Science and Technology of China (2021).</p>
+  </section>
+</article>

@@ -2,3 +2,4 @@ main:
   - {title: Research, url: /}
   - {title: Publications, url: /publications/}
   - {title: Teaching, url: /teaching/}
+  - {title: CV, url: /cv/}

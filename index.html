@@ -4,10 +4,36 @@ title: Continual learning in robotics
 permalink: /
 author_profile: true
 ---
-<p class="intro">I'm Yiyang Jia, a PhD student in Computer Science at University College London. I study how robots learn new skills without losing earlier ones, and how they recognise when to reuse them.</p>
-<p>My current focus is humanoid robots. When a new request arrives while a robot is already moving, how should it adapt without being told where one task ends and the next begins?</p>
+<p class="intro">I'm Yiyang Jia, a PhD student in Computer Science at University College London. I study how humanoid robots learn as one task flows into the next, without a reset or a clear boundary between tasks.</p>
+<p>Past experience rarely fits a new situation exactly. How can a robot decide what to reuse, act to find out what it doesn't yet know, and try a new approach? What it learns from that attempt should help shape its next decision.</p>
+{% include tin-story.html %}
 <h2 class="section-title">Selected research</h2>
+<article class="spire-feature" id="spire" aria-labelledby="spire-title">
+  <div class="spire-player">
+    <video controls muted loop playsinline preload="metadata" width="960" height="550" poster="{{ '/images/spire-replay-poster.png' | relative_url }}" aria-label="SPIRE: recorded movements and signed control contributions in three tasks">
+      <source src="{{ '/images/spire-replay.mp4' | relative_url }}" type="video/mp4">
+      <a href="{{ '/images/spire-replay.mp4' | relative_url }}">Watch the replay</a>
+    </video>
+    <div class="spire-chapters" role="group" aria-label="Jump to an environment" hidden>
+      <button type="button" data-start="0">Coordinate</button>
+      <button type="button" data-start="9">Three-joint</button>
+      <button type="button" data-start="18">Hidden force</button>
+    </div>
+  </div>
+  <div>
+    <span class="venue">Ongoing research · Manuscript under review</span>
+    <h3 id="spire-title">SPIRE: When does an old motor skill help?</h3>
+    <p class="research-byline authors"><strong>Yiyang Jia</strong>, Mingyang Lyu, Gongce Cao, et al.</p>
+    <p>Can a controller recognise a change of situation and reuse parts of an earlier skill without being told which task it is facing? SPIRE tests this by selectively rewinding what the controller learned before.</p>
+    <p class="spire-key">Left: one selected pair per task, with prior training (blue) and from scratch (coral). Right: signed motor contributions from that trained run, step by step.</p>
+    <nav class="paper-links" aria-label="SPIRE resources"><a href="{{ '/files/spire-reuse-figure.pdf' | relative_url }}">Full Figure 4 (PDF)</a></nav>
+  </div>
+</article>
+<script defer src="{{ '/assets/js/spire-replay.js' | relative_url }}"></script>
 {% assign papers = site.publications | sort: 'rank' %}
 {% for paper in papers %}{% include research-row.html paper=paper %}{% endfor %}
+<p><a href="{{ '/publications/' | relative_url }}">All publications and preprints</a></p>
+<script src="{{ '/assets/js/research-preview.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/citation.js' | relative_url }}" defer></script>
 <h2 class="section-title">Background</h2>
 <p>Before my PhD, I worked on embodied intelligence at the Institute of Automation, Chinese Academy of Sciences. I hold an MSc in Robotics and AI (Distinction) from UCL and a BEng in Robot Engineering from the University of Electronic Science and Technology of China.</p>

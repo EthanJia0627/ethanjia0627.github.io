@@ -7,8 +7,9 @@ _site/
 # Ignore the directory for local files during development
 local/
 
-# Ignore the Gemfile that is generated
-Gemfile.lock
+# Unused workshop draft frames are not part of the published site.
+images/tin-story/next-tin.webp
+images/tin-story/request.webp
 
 # Ignore files created by npm
 node_modules
